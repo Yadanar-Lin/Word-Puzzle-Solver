@@ -2,44 +2,48 @@
 
 **CS152 — Programming Paradigms | San José State University**
 
-A Python-based word puzzle solver that uses search algorithms and data structures to explore valid solutions to word-based puzzles.
+A Python-based Wordle-style puzzle game that uses AI search techniques and data structures to help users solve word puzzles through intelligent guess recommendations.
 
 ## Project Overview
 
-This project aims to develop an interactive word puzzle solver that systematically explores possible word combinations instead of returning a predetermined answer. It is designed to identify whether a puzzle has one solution, multiple solutions, or no valid solution.
+This project aims to develop an interactive Wordle-style game where users attempt to guess a hidden word. After each guess, the game provides feedback indicating which letters are correct, misplaced, or incorrect. The AI uses this feedback to narrow down possible words and recommend the next guess.
+
+The system explores possible solutions based on previous guesses rather than providing predetermined recommendations. It is designed to handle situations where one, multiple, or no possible words remain.
 
 ## Project Objectives
 
-- Represent word puzzles using appropriate Python data structures.
-- Explore possible word combinations and placements using search-based problem solving.
-- Prune invalid search paths to reduce unnecessary exploration.
-- Validate possible solutions according to puzzle rules.
-- Display all applicable solution outcomes clearly.
+- Represent words, guesses, and feedback using appropriate Python data structures.
+- Allow users to enter guesses and receive feedback.
+- Narrow down possible words based on previous guesses.
+- Recommend the next guess using search-based problem solving.
+- Eliminate invalid candidates to reduce unnecessary exploration.
+- Display possible solutions and AI recommendations clearly.
 
 ## AI Approach
 
-The proposed solver uses a search-based approach to explore possible states and eliminate invalid paths. The implementation will investigate depth-first search (DFS), backtracking, and pruning.
+The proposed system uses constraint-based search to explore possible words and eliminate candidates that do not match previous feedback. The AI will investigate candidate filtering, search strategies, and guess ranking to recommend useful guesses.
 
-- **State:** A partial puzzle configuration.
-- **Actions:** Possible next word or letter placements.
-- **Goal test:** Determine whether a completed configuration satisfies the puzzle rules.
-- **Pruning:** Stop exploring paths that cannot produce valid solutions.
+- **State:** The remaining possible words and previous guess feedback.
+- **Actions:** Select a possible word as the next guess.
+- **Goal test:** Determine whether the guessed word matches the hidden word.
+- **Pruning:** Eliminate words that are inconsistent with previous feedback.
 
-The exact puzzle representation and rules will be finalized during implementation.
+The exact search and recommendation strategies will be finalized during implementation.
 
 ## Expected Outcomes
 
 | Outcome | Expected Behavior |
 | --- | --- |
-| One solution | Find and display the valid solution. |
-| Multiple solutions | Find and display the valid possibilities. |
-| No solution | Report that no valid solution exists. |
+| One solution | Identify the remaining possible word and recommend it. |
+| Multiple solutions | Display possible words and recommend a useful next guess. |
+| No solution | Report that no possible words match the current constraints. |
 
 ## Technologies
 
 - Python 3
 - Git and GitHub
 - Search algorithms and Python data structures
+- Graphical user interface (optional)
 
 ## Team
 
@@ -49,4 +53,4 @@ The exact puzzle representation and rules will be finalized during implementatio
 ## References
 
 - Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson.
-- [Python Documentation](https://docs.python.org/3/)
+- [Python Documentation](https://docs.python.org/3/) 
