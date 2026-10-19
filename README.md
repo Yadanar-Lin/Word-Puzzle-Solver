@@ -53,4 +53,5 @@ The exact search and recommendation strategies will be finalized during implemen
 ## References
 
 - Russell, S., & Norvig, P. (2020). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson.
-- [Python Documentation](https://docs.python.org/3/) 
+- [Python Documentation](https://docs.python.org/3/)
+- dwyl/english-words — Open-source English word list used for dictionary validation and AI word recommendations.
